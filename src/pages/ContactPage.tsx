@@ -52,8 +52,8 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact Us"
-        description="Get in touch with InfoBio Fusion. We'd love to hear from you about our articles, suggestions, or any questions you may have."
+        title="Contact Nithie NR"
+        description="Got questions about tech products or want to collaborate? Drop me a message! I'd love to hear from you about reviews, deals, or just chat tech."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-white via-rose-50/20 to-rose-50/40">
@@ -63,11 +63,11 @@ const ContactPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center mb-12">
               <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
-                <span className="gradient-text">Connect</span> With Us
+                Let's <span className="gradient-text">Chat Tech!</span> 💬
               </h1>
               <p className="text-xl md:text-2xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
-                Where technology meets intelligence, conversations begin. 
-                Let's discuss how we can help you navigate the digital future.
+                Got questions about a product? Want to collab? Or just want to say hi? 
+                Drop me a message - I actually read and reply to everything!
               </p>
             </div>
           </div>
@@ -80,11 +80,11 @@ const ContactPage: React.FC = () => {
             <div className="space-y-8">
               <div className="card p-8">
                 <h2 className="text-3xl font-display font-bold text-secondary-900 mb-6">
-                  Let's Start a <span className="gradient-text">Conversation</span>
+                  How to <span className="gradient-text">Reach Me</span> 📲
                 </h2>
                 <p className="text-lg text-secondary-600 mb-8 leading-relaxed">
-                  Whether you're seeking insights, have feedback on our content, or want to explore 
-                  partnership opportunities, we're here to listen and engage meaningfully.
+                  Whether you need product advice, want to suggest a review, or have collaboration ideas, 
+                  I'm all ears! I personally respond to every message because your questions matter.
                 </p>
 
                 <div className="space-y-8">
@@ -93,10 +93,10 @@ const ContactPage: React.FC = () => {
                       <Mail className="h-6 w-6 text-primary-600" />
                     </div>
                     <div>
-                      <h3 className="font-display font-bold text-secondary-900 text-lg mb-2">Direct Contact</h3>
+                      <h3 className="font-display font-bold text-secondary-900 text-lg mb-2">📧 Email Me</h3>
                       <p className="text-secondary-700 font-medium">{siteConfig.contactEmail}</p>
                       <p className="text-sm text-secondary-500 mt-1">
-                        Professional responses within 24-48 hours
+                        I check emails daily and respond within 24 hours (usually faster!)
                       </p>
                     </div>
                   </div>
@@ -106,10 +106,10 @@ const ContactPage: React.FC = () => {
                       <Phone className="h-6 w-6 text-secondary-600" />
                     </div>
                     <div>
-                      <h3 className="font-display font-bold text-secondary-900 text-lg mb-2">Response Commitment</h3>
-                      <p className="text-secondary-700 font-medium">24-48 Hour Turnaround</p>
+                      <h3 className="font-display font-bold text-secondary-900 text-lg mb-2">⚡ Quick Response</h3>
+                      <p className="text-secondary-700 font-medium">Usually Within 12-24 Hours</p>
                       <p className="text-sm text-secondary-500 mt-1">
-                        Priority handling for time-sensitive inquiries
+                        Urgent product questions get priority treatment
                       </p>
                     </div>
                   </div>

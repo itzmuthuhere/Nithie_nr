@@ -64,45 +64,45 @@ const HomePage: React.FC = () => {
         <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-gray-600 mb-8 border border-gray-200">
-              <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
-              Trusted by 10,000+ professionals worldwide
+              <span className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
+              Trusted by 50,000+ tech enthusiasts worldwide
             </div>
             <h1 className="font-display font-bold mb-6 leading-tight animate-slide-up text-gray-900">
-              Empowering Innovation Through <br />
-              <span className="gradient-text">Intelligent Insights</span>
+              {/* Hey, I'm <span className="gradient-text">Nithie NR</span> <br /> */}
+              <span className="gradient-text">Your Tech Guide & Deal Hunter</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up">
               {siteConfig.description}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up">
               <Link to="/articles" className="btn-primary">
-                Explore Articles
+                🔥 Latest Reviews & Deals
               </Link>
               <Link to="/about" className="btn-secondary">
-                Learn More
+                About Nithie
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <TrendingUp className="h-8 w-8 text-gray-600" />
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                  <span className="text-2xl">📱</span>
                 </div>
-                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Latest Trends</h3>
-                <p className="text-gray-600 text-sm text-center">Stay ahead with cutting-edge technology insights</p>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Honest Reviews</h3>
+                <p className="text-gray-600 text-sm text-center">Unbiased tech reviews from a real user's perspective</p>
               </div>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <BookOpen className="h-8 w-8 text-gray-600" />
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <span className="text-2xl">💰</span>
                 </div>
-                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Expert Analysis</h3>
-                <p className="text-gray-600 text-sm text-center">Deep-dive articles from industry professionals</p>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Best Deals</h3>
+                <p className="text-gray-600 text-sm text-center">Curated deals and discounts on top tech products</p>
               </div>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                  <Users className="h-8 w-8 text-gray-600" />
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                  <span className="text-2xl">🎓</span>
                 </div>
-                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Community Driven</h3>
-                <p className="text-gray-600 text-sm text-center">Join thousands of forward-thinking professionals</p>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Easy Tutorials</h3>
+                <p className="text-gray-600 text-sm text-center">Step-by-step guides to help you master tech</p>
               </div>
             </div>
           </div>
@@ -114,15 +114,15 @@ const HomePage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-display font-semibold text-gray-900 mb-2">
-              Discover Knowledge
+              Find What You Need
             </h2>
             <p className="text-gray-600">
-              Search through our comprehensive library of expert insights and analysis
+              Search through reviews, tutorials, and deals to find exactly what you're looking for
             </p>
           </div>
           <SearchBar
             onSearch={handleSearch}
-            placeholder="Search articles by title, description, or tags..."
+            placeholder="Search reviews, deals, tutorials..."
             initialValue={searchQuery}
           />
         </div>
@@ -141,10 +141,10 @@ const HomePage: React.FC = () => {
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-gray-900 mb-4">
-                Featured Articles
+                🌟 Featured Content
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Handpicked insights from our editorial team to keep you at the forefront of innovation
+                My latest reviews, hottest deals, and most helpful tutorials - handpicked just for you
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -162,7 +162,7 @@ const HomePage: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
             <div>
               <h2 className="font-display font-bold text-gray-900 mb-2">
-                {searchQuery ? `Search Results` : 'Latest Articles'}
+                {searchQuery ? `Search Results` : '📚 Latest Posts'}
               </h2>
               {searchQuery && (
                 <p className="text-gray-600">
@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
             </div>
             <div className="flex items-center mt-4 md:mt-0">
               <span className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium border border-gray-200">
-                {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''} found
+                {filteredArticles.length} post{filteredArticles.length !== 1 ? 's' : ''} found
               </span>
             </div>
           </div>
@@ -199,16 +199,16 @@ const HomePage: React.FC = () => {
                 <BookOpen className="h-12 w-12 text-secondary-400" />
               </div>
               <h3 className="text-xl font-display font-semibold text-secondary-900 mb-2">
-                No articles found
+                No posts found
               </h3>
               <p className="text-secondary-600 text-lg mb-6">
-                We couldn't find any articles matching your search criteria.
+                Couldn't find what you're looking for? Try a different search term or browse all posts.
               </p>
               <button
                 onClick={() => handleSearch('')}
                 className="btn-primary"
               >
-                View All Articles
+                View All Posts
               </button>
             </div>
           )}
@@ -230,24 +230,24 @@ const HomePage: React.FC = () => {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <h2 className="font-display font-bold mb-4">
-              Stay Ahead of the Curve
+              🚀 Join the Nithie NR Community
             </h2>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Join our community of forward-thinking professionals. Get exclusive insights, trend analysis, and expert perspectives delivered weekly.
+              Get exclusive deals, early access to reviews, and tech tips delivered straight to your inbox. Plus, never miss a money-saving opportunity!
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
             <input
               type="email"
-              placeholder="Enter your professional email"
+              placeholder="Your email for exclusive deals & updates"
               className="flex-1 px-6 py-4 rounded-xl text-secondary-900 bg-white/95 backdrop-blur-sm border-0 focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-secondary-500"
             />
             <button className="px-8 py-4 bg-white text-primary-700 rounded-xl font-semibold hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200 shadow-lg hover:shadow-xl">
-              Subscribe
+              Get Deals 🎯
             </button>
           </div>
           <p className="text-sm text-primary-200 mt-4">
-            Free to join. Unsubscribe anytime. No spam, ever.
+            💯 Free forever. Unsubscribe anytime. I hate spam as much as you do.
           </p>
         </div>
       </section>
