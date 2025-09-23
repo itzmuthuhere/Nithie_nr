@@ -49,8 +49,8 @@ const HomePage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-400"></div>
       </div>
     );
   }
@@ -60,27 +60,49 @@ const HomePage: React.FC = () => {
       <SEO />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to {siteConfig.title}
+      <section className="relative overflow-hidden bg-white border-b border-gray-100 section-padding">
+        <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 bg-gray-50 rounded-full text-sm font-medium text-gray-600 mb-8 border border-gray-200">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
+              Trusted by 10,000+ professionals worldwide
+            </div>
+            <h1 className="font-display font-bold mb-6 leading-tight animate-slide-up text-gray-900">
+              Empowering Innovation Through <br />
+              <span className="gradient-text">Intelligent Insights</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Your ultimate source for technology insights, insurance guidance, and digital innovation news
+            <p className="text-xl md:text-2xl text-gray-500 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up">
+              {siteConfig.description}
             </p>
-            <div className="flex items-center justify-center space-x-8 text-blue-100">
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="h-6 w-6" />
-                <span>Latest Trends</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up">
+              <Link to="/articles" className="btn-primary">
+                Explore Articles
+              </Link>
+              <Link to="/about" className="btn-secondary">
+                Learn More
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in">
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                  <TrendingUp className="h-8 w-8 text-gray-600" />
+                </div>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Latest Trends</h3>
+                <p className="text-gray-600 text-sm text-center">Stay ahead with cutting-edge technology insights</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <BookOpen className="h-6 w-6" />
-                <span>Expert Insights</span>
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                  <BookOpen className="h-8 w-8 text-gray-600" />
+                </div>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Expert Analysis</h3>
+                <p className="text-gray-600 text-sm text-center">Deep-dive articles from industry professionals</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-6 w-6" />
-                <span>Community Driven</span>
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-xl border border-gray-100">
+                <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="h-8 w-8 text-gray-600" />
+                </div>
+                <h3 className="text-lg font-display font-semibold mb-2 text-gray-900">Community Driven</h3>
+                <p className="text-gray-600 text-sm text-center">Join thousands of forward-thinking professionals</p>
               </div>
             </div>
           </div>
@@ -88,8 +110,16 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Search Bar */}
-      <section className="bg-white py-8 shadow-sm">
+      <section className="bg-gray-50 py-12 border-y border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-display font-semibold text-gray-900 mb-2">
+              Discover Knowledge
+            </h2>
+            <p className="text-gray-600">
+              Search through our comprehensive library of expert insights and analysis
+            </p>
+          </div>
           <SearchBar
             onSearch={handleSearch}
             placeholder="Search articles by title, description, or tags..."
@@ -99,7 +129,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Top Banner Ad */}
-      <section className="bg-gray-50 py-4">
+      <section className="bg-white py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AdPlaceholder size="banner" />
         </div>
@@ -107,9 +137,16 @@ const HomePage: React.FC = () => {
 
       {/* Featured Articles */}
       {!searchQuery && (
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+        <section className="section-padding bg-white">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-gray-900 mb-4">
+                Featured Articles
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Handpicked insights from our editorial team to keep you at the forefront of innovation
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredArticles.map((article) => (
                 <ArticleCard key={article.slug} article={article} />
@@ -120,15 +157,24 @@ const HomePage: React.FC = () => {
       )}
 
       {/* All Articles */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">
-              {searchQuery ? `Search Results for "${searchQuery}"` : 'Latest Articles'}
-            </h2>
-            <p className="text-gray-600">
-              {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''} found
-            </p>
+      <section className="section-padding bg-gray-50">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
+            <div>
+              <h2 className="font-display font-bold text-gray-900 mb-2">
+                {searchQuery ? `Search Results` : 'Latest Articles'}
+              </h2>
+              {searchQuery && (
+                <p className="text-gray-600">
+                  Results for "<span className="font-medium text-gray-800">{searchQuery}</span>"
+                </p>
+              )}
+            </div>
+            <div className="flex items-center mt-4 md:mt-0">
+              <span className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium border border-gray-200">
+                {filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''} found
+              </span>
+            </div>
           </div>
 
           {paginatedData.articles.length > 0 ? (
@@ -148,15 +194,21 @@ const HomePage: React.FC = () => {
               />
             </>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 text-lg mb-4">
-                No articles found matching your search.
+            <div className="text-center py-16">
+              <div className="w-24 h-24 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="h-12 w-12 text-secondary-400" />
+              </div>
+              <h3 className="text-xl font-display font-semibold text-secondary-900 mb-2">
+                No articles found
+              </h3>
+              <p className="text-secondary-600 text-lg mb-6">
+                We couldn't find any articles matching your search criteria.
               </p>
               <button
                 onClick={() => handleSearch('')}
-                className="text-blue-600 hover:text-blue-800 font-medium"
+                className="btn-primary"
               >
-                Clear search and show all articles
+                View All Articles
               </button>
             </div>
           )}
@@ -164,29 +216,39 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Bottom Banner Ad */}
-      <section className="bg-gray-50 py-4">
+      <section className="bg-rose-50/20 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AdPlaceholder size="banner" />
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="bg-blue-600 text-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-blue-100 mb-8">
-            Get the latest articles and insights delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 text-white section-padding">
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='m0 40l40-40h-40v40zm40 0v-40h-40l40 40z'/%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <h2 className="font-display font-bold mb-4">
+              Stay Ahead of the Curve
+            </h2>
+            <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+              Join our community of forward-thinking professionals. Get exclusive insights, trend analysis, and expert perspectives delivered weekly.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900"
+              placeholder="Enter your professional email"
+              className="flex-1 px-6 py-4 rounded-xl text-secondary-900 bg-white/95 backdrop-blur-sm border-0 focus:outline-none focus:ring-2 focus:ring-white/50 placeholder-secondary-500"
             />
-            <button className="px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            <button className="px-8 py-4 bg-white text-primary-700 rounded-xl font-semibold hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200 shadow-lg hover:shadow-xl">
               Subscribe
             </button>
           </div>
+          <p className="text-sm text-primary-200 mt-4">
+            Free to join. Unsubscribe anytime. No spam, ever.
+          </p>
         </div>
       </section>
     </>

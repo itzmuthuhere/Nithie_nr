@@ -18,78 +18,91 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-secondary-200 sticky top-0 z-50">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <BookOpen className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">
-              {siteConfig.title}
-            </span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <BookOpen className="h-10 w-10 text-primary-600 group-hover:text-primary-700 transition-colors duration-200" />
+              <div className="absolute -inset-1 bg-primary-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-display font-bold text-secondary-900">
+                {siteConfig.title}
+              </span>
+              <span className="text-xs text-secondary-600 font-medium tracking-wide">
+                {siteConfig.tagline}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   isActive(item.href)
-                    ? 'text-blue-600'
-                    : 'text-gray-700'
+                    ? 'text-primary-600 bg-primary-50 shadow-sm'
+                    : 'text-secondary-700 hover:text-primary-600 hover:bg-secondary-50'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Link
-              to="/search"
-              className="text-gray-400 hover:text-blue-600 transition-colors"
-            >
-              <Search className="h-5 w-5" />
-            </Link>
+            <div className="ml-4 pl-4 border-l border-secondary-200">
+              <Link
+                to="/search"
+                className="p-2 text-secondary-500 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all duration-200"
+                title="Search"
+              >
+                <Search className="h-5 w-5" />
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className="md:hidden p-2 rounded-lg text-secondary-600 hover:text-primary-600 hover:bg-secondary-100 transition-all duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            {navigation.map((item) => (
+          <div className="md:hidden py-4 border-t border-secondary-200 bg-white/95 backdrop-blur-md">
+            <div className="space-y-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block py-3 px-4 text-sm font-medium rounded-lg mx-2 transition-all duration-200 ${
+                    isActive(item.href)
+                      ? 'text-primary-600 bg-primary-50'
+                      : 'text-secondary-700 hover:text-primary-600 hover:bg-secondary-50'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
               <Link
-                key={item.name}
-                to={item.href}
-                className={`block py-2 px-4 text-sm font-medium transition-colors hover:text-blue-600 ${
-                  isActive(item.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700'
-                }`}
+                to="/search"
+                className="flex items-center space-x-2 py-3 px-4 mx-2 text-sm font-medium text-secondary-700 hover:text-primary-600 hover:bg-secondary-50 rounded-lg transition-all duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item.name}
+                <Search className="h-4 w-4" />
+                <span>Search</span>
               </Link>
-            ))}
-            <Link
-              to="/search"
-              className="flex items-center space-x-2 py-2 px-4 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Search className="h-4 w-4" />
-              <span>Search</span>
-            </Link>
+            </div>
           </div>
         )}
       </div>

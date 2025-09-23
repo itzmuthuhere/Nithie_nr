@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import { FileText, AlertTriangle, Scale, Mail } from 'lucide-react';
+import { Scale, FileText, AlertCircle, CheckCircle } from 'lucide-react';
 import { siteConfig } from '../config';
 
 const TermsPage: React.FC = () => {
@@ -8,204 +8,237 @@ const TermsPage: React.FC = () => {
     <>
       <SEO
         title="Terms of Service"
-        description="Terms of Service for Nithie_nr - Read our terms and conditions for using our website and services."
+        description="Terms of Service for Nithie_nr - understanding your rights and responsibilities when using our platform."
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Terms of Service
-          </h1>
-          <p className="text-lg text-gray-600">
-            Last updated: {new Date().toLocaleDateString()}
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-secondary-50 via-white to-primary-50">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-600/5 to-secondary-600/5"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center mb-16">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center">
+                  <Scale className="w-8 h-8 text-secondary-600" />
+                </div>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
+                Terms of <span className="gradient-text">Service</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
+                Clear, fair terms that protect both you and our platform while fostering a valuable community.
+              </p>
+              <p className="text-secondary-500 mt-4">Last updated: {new Date().toLocaleDateString()}</p>
+            </div>
+          </div>
         </div>
 
-        <div className="prose prose-lg max-w-none">
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 mb-8">
-            <div className="flex items-center mb-2">
-              <AlertTriangle className="h-5 w-5 text-amber-600 mr-2" />
-              <h2 className="text-lg font-semibold text-amber-900 m-0">Important Notice</h2>
-            </div>
-            <p className="text-amber-800 m-0">
-              By accessing and using {siteConfig.title}, you accept and agree to be bound by these Terms of Service.
-            </p>
-          </div>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-              <FileText className="h-6 w-6 mr-2 text-blue-600" />
-              Acceptance of Terms
-            </h2>
-            <p className="text-gray-700 mb-4">
-              Welcome to {siteConfig.title}. These Terms of Service ("Terms") govern your use of our website 
-              located at https://{siteConfig.domain} (the "Service") operated by {siteConfig.title} ("us", "we", or "our").
-            </p>
-            <p className="text-gray-700 mb-4">
-              By accessing or using our Service, you agree to be bound by these Terms. If you disagree 
-              with any part of these terms, then you may not access the Service.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Use of the Website</h2>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Permitted Use</h3>
-            <p className="text-gray-700 mb-4">You may use our website for:</p>
-            <ul className="list-disc list-inside mb-4 text-gray-700">
-              <li>Reading and sharing our articles and content</li>
-              <li>Subscribing to our newsletter</li>
-              <li>Contacting us through our contact forms</li>
-              <li>Personal, non-commercial use</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Prohibited Use</h3>
-            <p className="text-gray-700 mb-4">You may not:</p>
-            <ul className="list-disc list-inside mb-4 text-gray-700">
-              <li>Copy, reproduce, or distribute our content without permission</li>
-              <li>Use automated tools to scrape or harvest data from our website</li>
-              <li>Attempt to interfere with or disrupt our website's functionality</li>
-              <li>Use our website for any illegal or unauthorized purpose</li>
-              <li>Transmit viruses, malware, or other harmful code</li>
-              <li>Impersonate us or claim affiliation without authorization</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-              <Scale className="h-6 w-6 mr-2 text-blue-600" />
-              Intellectual Property Rights
-            </h2>
-            
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Content</h3>
-            <p className="text-gray-700 mb-4">
-              The Service and its original content, features, and functionality are and will remain the 
-              exclusive property of {siteConfig.title} and its licensors. The Service is protected by 
-              copyright, trademark, and other laws.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">User Content</h3>
-            <p className="text-gray-700 mb-4">
-              By submitting content to our website (through comments, contact forms, etc.), you grant 
-              us a non-exclusive, royalty-free, perpetual, and worldwide license to use, modify, publicly 
-              display, and distribute such content.
-            </p>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">Fair Use</h3>
-            <p className="text-gray-700 mb-4">
-              You may quote brief excerpts from our articles for review, comment, or educational purposes, 
-              provided you include proper attribution and a link back to the original article.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Disclaimer of Warranties</h2>
-            <p className="text-gray-700 mb-4">
-              The information on this website is provided on an "as is" basis. To the fullest extent 
-              permitted by law, we disclaim all warranties, whether express or implied, including but 
-              not limited to:
-            </p>
-            <ul className="list-disc list-inside mb-4 text-gray-700">
-              <li>Warranties of merchantability and fitness for a particular purpose</li>
-              <li>Warranties that the service will be uninterrupted or error-free</li>
-              <li>Warranties regarding the accuracy or completeness of information</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>
-            <p className="text-gray-700 mb-4">
-              In no event shall {siteConfig.title}, its directors, employees, partners, agents, 
-              suppliers, or affiliates be liable for any indirect, incidental, punitive, consequential, 
-              or similar damages arising out of or related to your use of the Service.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Our total liability to you for all damages shall not exceed the amount you paid us, 
-              if any, for accessing our Service.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Links and Services</h2>
-            <p className="text-gray-700 mb-4">
-              Our website may contain links to third-party websites or services. We do not control 
-              and are not responsible for the content, privacy policies, or practices of any third-party 
-              websites or services.
-            </p>
-            <p className="text-gray-700 mb-4">
-              We strongly advise you to read the terms and conditions and privacy policies of any 
-              third-party websites or services that you visit.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Advertising</h2>
-            <p className="text-gray-700 mb-4">
-              Our website may display advertisements provided by third parties, including Google AdSense. 
-              We are not responsible for the content of these advertisements or the privacy practices 
-              of advertisers.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Advertisers may use cookies and other tracking technologies to collect information about 
-              your visits to our website and other websites to provide relevant advertisements.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Privacy</h2>
-            <p className="text-gray-700 mb-4">
-              Your privacy is important to us. Please read our Privacy Policy, which explains how we 
-              collect, use, and protect your information when you use our Service.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Termination</h2>
-            <p className="text-gray-700 mb-4">
-              We may terminate or suspend your access to our Service immediately, without prior notice 
-              or liability, for any reason whatsoever, including without limitation if you breach the Terms.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Upon termination, your right to use the Service will cease immediately.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to Terms</h2>
-            <p className="text-gray-700 mb-4">
-              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
-              If a revision is material, we will try to provide at least 30 days notice prior to any new 
-              terms taking effect.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Your continued use of the Service after we post any modifications to the Terms constitutes 
-              acceptance of those changes.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>
-            <p className="text-gray-700 mb-4">
-              These Terms shall be interpreted and governed by the laws of [Your Jurisdiction], without 
-              regard to its conflict of law provisions. Any disputes arising from these Terms shall be 
-              resolved in the courts of [Your Jurisdiction].
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-              <Mail className="h-6 w-6 mr-2 text-blue-600" />
-              Contact Information
-            </h2>
-            <p className="text-gray-700 mb-4">
-              If you have any questions about these Terms of Service, please contact us:
-            </p>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-700">
-                <strong>Email:</strong> {siteConfig.contactEmail}<br />
-                <strong>Website:</strong> <a href={`https://${siteConfig.domain}`} className="text-blue-600 hover:text-blue-800">{siteConfig.domain}</a>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          {/* Introduction */}
+          <section className="mb-16">
+            <div className="card p-10 bg-gradient-to-r from-secondary-50 to-primary-50 border-l-4 border-secondary-500">
+              <h2 className="text-3xl font-display font-bold text-secondary-900 mb-6">Agreement Overview</h2>
+              <p className="text-lg text-secondary-700 leading-relaxed">
+                Welcome to {siteConfig.title}. By accessing our website and using our services, you agree to be 
+                bound by these Terms of Service. These terms establish a legal agreement between you and {siteConfig.title}, 
+                designed to ensure a productive and respectful environment for all users.
               </p>
             </div>
+          </section>
+
+          {/* Acceptance of Terms */}
+          <section className="mb-16">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-4">
+                <CheckCircle className="w-6 h-6 text-primary-600" />
+              </div>
+              <h2 className="text-3xl font-display font-bold text-secondary-900">Acceptance of Terms</h2>
+            </div>
+
+            <div className="card p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-display font-bold text-secondary-900 mb-3">By Using Our Service</h3>
+                  <p className="text-secondary-700 leading-relaxed">
+                    By accessing {siteConfig.title}, you acknowledge that you have read, understood, and agree to be bound by these terms. 
+                    If you do not agree with any part of these terms, you should not use our services.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-display font-bold text-secondary-900 mb-3">Updates to Terms</h3>
+                  <p className="text-secondary-700 leading-relaxed">
+                    We may update these terms from time to time to reflect changes in our services or legal requirements. 
+                    We will notify users of significant changes and the updated terms will be posted on this page.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Use of Service */}
+          <section className="mb-16">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mr-4">
+                <FileText className="w-6 h-6 text-accent-600" />
+              </div>
+              <h2 className="text-3xl font-display font-bold text-secondary-900">Permitted Use</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="card p-8">
+                <h3 className="text-xl font-display font-bold text-secondary-900 mb-4">✅ You May</h3>
+                <ul className="space-y-3 text-secondary-700">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Access and read our content for personal and professional use</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Share our articles with proper attribution</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Subscribe to our newsletter and communications</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Contact us with questions, feedback, or suggestions</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="card p-8">
+                <h3 className="text-xl font-display font-bold text-secondary-900 mb-4">❌ You May Not</h3>
+                <ul className="space-y-3 text-secondary-700">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Copy, reproduce, or republish our content without permission</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Use our service for any illegal or unauthorized purpose</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Attempt to gain unauthorized access to our systems</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Distribute harmful code, viruses, or malicious content</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Intellectual Property */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-display font-bold text-secondary-900 mb-8">Intellectual Property Rights</h2>
+            
+            <div className="space-y-8">
+              <div className="card p-8">
+                <h3 className="text-xl font-display font-bold text-secondary-900 mb-4">Our Content</h3>
+                <p className="text-secondary-700 leading-relaxed mb-4">
+                  All content on {siteConfig.title}, including articles, graphics, logos, and design elements, 
+                  is owned by us or our licensors and is protected by copyright and intellectual property laws.
+                </p>
+                <p className="text-secondary-700 leading-relaxed">
+                  You may not use our content for commercial purposes without explicit written permission. 
+                  Attribution is required for any permitted sharing or reference to our work.
+                </p>
+              </div>
+
+              <div className="card p-8">
+                <h3 className="text-xl font-display font-bold text-secondary-900 mb-4">Your Content</h3>
+                <p className="text-secondary-700 leading-relaxed">
+                  When you submit content to us (such as comments, feedback, or suggestions), you grant us 
+                  a non-exclusive license to use, modify, and publish that content in connection with our services. 
+                  You retain ownership of your content and may request its removal at any time.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Disclaimers */}
+          <section className="mb-16">
+            <div className="flex items-center mb-8">
+              <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4">
+                <AlertCircle className="w-6 h-6 text-yellow-600" />
+              </div>
+              <h2 className="text-3xl font-display font-bold text-secondary-900">Disclaimers & Limitations</h2>
+            </div>
+
+            <div className="card p-8 bg-yellow-50 border-l-4 border-yellow-400">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-display font-bold text-secondary-900 mb-3">Information Disclaimer</h3>
+                  <p className="text-secondary-700 leading-relaxed">
+                    The information provided on {siteConfig.title} is for educational and informational purposes only. 
+                    While we strive for accuracy, we do not guarantee that all information is complete, current, or error-free. 
+                    You should verify important information independently.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-display font-bold text-secondary-900 mb-3">Professional Advice</h3>
+                  <p className="text-secondary-700 leading-relaxed">
+                    Our content is not intended to substitute for professional advice in technology, business, legal, 
+                    or financial matters. Always consult with qualified professionals for specific guidance related to your situation.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-display font-bold text-secondary-900 mb-3">Service Availability</h3>
+                  <p className="text-secondary-700 leading-relaxed">
+                    We strive to maintain consistent service availability but do not guarantee uninterrupted access. 
+                    We reserve the right to modify, suspend, or discontinue any aspect of our service with reasonable notice.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Limitation of Liability */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-display font-bold text-secondary-900 mb-8">Limitation of Liability</h2>
+            <div className="card p-8">
+              <p className="text-secondary-700 leading-relaxed mb-4">
+                To the fullest extent permitted by law, {siteConfig.title} and its affiliates shall not be liable 
+                for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.
+              </p>
+              <p className="text-secondary-700 leading-relaxed">
+                Our total liability for any claims related to our services shall not exceed the amount you paid us 
+                in the twelve months preceding the claim, if any.
+              </p>
+            </div>
+          </section>
+
+          {/* Governing Law */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-display font-bold text-secondary-900 mb-8">Governing Law</h2>
+            <div className="card p-8">
+              <p className="text-secondary-700 leading-relaxed">
+                These terms are governed by and construed in accordance with applicable laws. 
+                Any disputes arising from these terms or your use of our services will be resolved through 
+                good faith negotiation or, if necessary, through appropriate legal channels.
+              </p>
+            </div>
+          </section>
+
+          {/* Contact Information */}
+          <section className="card bg-gradient-to-r from-secondary-600 to-primary-600 p-10 text-center text-white">
+            <h2 className="text-3xl font-display font-bold mb-4">Questions About These Terms?</h2>
+            <p className="text-xl text-secondary-100 mb-6 max-w-2xl mx-auto">
+              We believe in clear communication. If you have questions about these terms or need clarification, 
+              we're here to help.
+            </p>
+            <a
+              href="/contact"
+              className="btn-secondary bg-white text-secondary-600 hover:bg-secondary-50 border-white"
+            >
+              Contact Us About Terms
+            </a>
           </section>
         </div>
       </div>
@@ -214,4 +247,3 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
-

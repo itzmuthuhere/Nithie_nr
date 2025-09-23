@@ -1,16 +1,17 @@
 // Site Configuration
 export const siteConfig = {
   title: 'Nithie_nr',
-  description: 'Your source for technology insights, insurance guidance, and digital innovation news',
-  domain: '{{YOUR_DOMAIN}}', // Replace with your actual domain
-  contactEmail: '{{CONTACT_EMAIL}}', // Replace with your contact email
-  author: 'Nithie_nr Team',
+  description: 'Empowering professionals with cutting-edge insights in technology, insurance innovation, and digital transformation',
+  domain: 'infobiofusion.com', // Replace with your actual domain
+  contactEmail: 'hello@infobiofusion.com', // Replace with your contact email
+  author: 'Nithie_nr Editorial Team',
+  tagline: 'Where Technology Meets Intelligence',
   
   // Social URLs
   social: {
-    twitter: 'https://twitter.com/{{YOUR_HANDLE}}',
-    facebook: 'https://facebook.com/{{YOUR_PAGE}}',
-    linkedin: 'https://linkedin.com/company/{{YOUR_COMPANY}}'
+    twitter: 'https://twitter.com/infobiofusion',
+    facebook: 'https://facebook.com/infobiofusion',
+    linkedin: 'https://linkedin.com/company/infobiofusion'
   },
   
   // Analytics & Ads
