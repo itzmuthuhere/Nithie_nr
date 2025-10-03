@@ -24,7 +24,12 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <BookOpen className="h-10 w-10 text-primary-600 group-hover:text-primary-700 transition-colors duration-200" />
+              {/* <BookOpen className="h-10 w-10 text-primary-600 group-hover:text-primary-700 transition-colors duration-200" /> */}
+              <img
+                src="public\assets\image.png"
+                alt="Custom"
+                className="h-12 w-12 object-contain group-hover:scale-105 transition-transform duration-200"
+              />
               <div className="absolute -inset-1 bg-primary-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             </div>
             <div className="flex flex-col">
@@ -43,11 +48,10 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  isActive(item.href)
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive(item.href)
                     ? 'text-primary-600 bg-primary-50 shadow-sm'
                     : 'text-secondary-700 hover:text-primary-600 hover:bg-secondary-50'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -84,11 +88,10 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block py-3 px-4 text-sm font-medium rounded-lg mx-2 transition-all duration-200 ${
-                    isActive(item.href)
+                  className={`block py-3 px-4 text-sm font-medium rounded-lg mx-2 transition-all duration-200 ${isActive(item.href)
                       ? 'text-primary-600 bg-primary-50'
                       : 'text-secondary-700 hover:text-primary-600 hover:bg-secondary-50'
-                  }`}
+                    }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
