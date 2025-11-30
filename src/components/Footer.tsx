@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Mail, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { BookOpen, Mail, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { siteConfig } from '../config';
 
 const Footer: React.FC = () => {
@@ -36,13 +36,13 @@ const Footer: React.FC = () => {
                 <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
               </a>
               <a
-                href={siteConfig.social.facebook}
+                href={siteConfig.social.instagram}
                 className="p-3 bg-secondary-800 hover:bg-primary-600 text-secondary-400 hover:text-white rounded-lg transition-all duration-200 group"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow us on Facebook"
+                aria-label="Follow us on Instagram"
               >
-                <Facebook className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
               </a>
               <a
                 href={siteConfig.social.linkedin}

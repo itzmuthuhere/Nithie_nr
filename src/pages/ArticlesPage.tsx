@@ -121,6 +121,8 @@ const ArticlesPage: React.FC = () => {
                       currentPage={currentPage}
                       totalPages={paginatedData.totalPages}
                       onPageChange={setCurrentPage}
+                      hasNext={currentPage < paginatedData.totalPages}
+                      hasPrev={currentPage > 1}
                     />
                   </div>
                 )}
