@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, BookOpen } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { siteConfig } from '../config';
+import image from '../../public/assets/image.png';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Header: React.FC = () => {
             <div className="relative">
               {/* <BookOpen className="h-10 w-10 text-primary-600 group-hover:text-primary-700 transition-colors duration-200" /> */}
               <img
-                src="public\assets\image.png"
+                src={image}
                 alt="Custom"
                 className="h-12 w-12 object-contain group-hover:scale-105 transition-transform duration-200"
               />
